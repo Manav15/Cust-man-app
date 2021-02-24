@@ -1,0 +1,16 @@
+<h3> User Components Work </h3>
+
+<ul class="list-group">
+    <li class="list-group-item">
+        <div class="row">
+            <div class="col-sm-4 col-md-4">
+                <app-user-image [user]="user" (userEvent) ="onMoreInfo($event)" ></app-user-image>
+            </div>
+            <div class="col-sm-8 col-md-8">
+                <app-user-info [user]="user"></app-user-info>
+
+            </div>
+        </div>
+
+    </li>
+</ul>
