@@ -1,4 +1,6 @@
-import { Component } from "@angular/core";
+import { Component , OnInit } from "@angular/core";
+import {USER_DATA} from "../model/mock";
+import { User } from "../model/user";
 
 @Component({
     selector : 'app-user',
@@ -6,19 +8,14 @@ import { Component } from "@angular/core";
     styleUrls : ['./user.component.css'] 
 })
 
-export class UserComponent{
-    user={
-        firstName : 'Bill',
-        lastName : 'Gates',
-        dob : new Date('Dec 10 , 1997'),
-        Address : '2/7,Wall Street',
-        City : 'Texas',
-        OrderTotal : 30000,
-        image : './assets/Images/mid.jpg',
-        votes : 1200
+export class UserComponent implements OnInit{ 
+    user : User; 
+
+    ngOnInit() {
+        this.user = USER_DATA;
     }
 
-    onMoreInfo(usr:any){
+    onMoreInfo(usr: User){
         alert(`Mr. ${usr.lastName} lives at ${usr.Address}, ${usr.City}`);
     }
 }
