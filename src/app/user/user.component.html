@@ -1,7 +1,7 @@
 <h3> User Components Work </h3>
 
 <ul class="list-group">
-    <li class="list-group-item">
+    <li class="list-group-item" *ngFor="let user of users">
         <div class="row">
             <div class="col-sm-2 col-md-2">
                 <app-user-image [user]="user" (userEvent) ="onMoreInfo($event)" ></app-user-image>
