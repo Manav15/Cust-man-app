@@ -4,6 +4,7 @@ export interface User{
     dob : Date;
     Address : string;
     City : string;
+    State : string;
     OrderTotal : number;
     isLiving : boolean;
     image : string;

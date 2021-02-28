@@ -1,16 +1,33 @@
-<h3> User Components Work </h3>
-
-<ul class="list-group">
-    <li class="list-group-item" *ngFor="let user of users">
-        <div class="row">
-            <div class="col-sm-2 col-md-2">
-                <app-user-image [user]="user" (userEvent) ="onMoreInfo($event)" ></app-user-image>
-            </div>
-            <div class="col-sm-10 col-md-10">
-                <app-user-info [user]="user"></app-user-info>
-
+<!-- <div class="container">
+    <div class="main">
+        <div class="page-header">
+            <div class="row">
+                <div class="col-md-4 col-sm-12">
+                    <h2 class="title">Customer</h2>
+                </div>
+                <div class="col-md-8 col-sm-12">
+                    <a class="btn btn-primary add-customer-btn">
+                        <i class="fa fa-user-plus"></i> <span>Add Customer</span>
+                    </a>
+                </div>
             </div>
         </div>
+    </div>
+</div> -->
+<div class="container">
+    <h3>Customer</h3>
+    
+    <div class="btn-group">
+        <button class="btn btn-success"    
+        (click)= "onAdd()" >Add Customer</button>
+    </div>
 
-    </li>
-</ul>
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let user of users">
+                <div class="col-sm-10 col-md-10">
+                    <app-user-info [user]="user"></app-user-info>
+            </div>
+        </li>
+    </ul>
+
+</div>
